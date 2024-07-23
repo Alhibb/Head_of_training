@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSCE Bootcamp - HTML Task</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #343a40; 
+            line-height: 1.6; 
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            color: #007bff; 
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px; 
+        }
+
+        p, li {
+            text-align: justify; 
+        }
+
+        code {
+            background-color: #e9ecef; 
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: Consolas, 'Courier New', monospace;
+        }
+
+        ul, ol {
+            margin-left: 30px; 
+        }
+
+        
+        .card {
+            border: 1px solid #dee2e6; 
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #ffffff; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .icon {
+            color: #007bff; 
+            margin-right: 8px;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #343a40; 
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>JSCE Bootcamp - HTML Task</h1>
+
+        <div class="card">
+            <h2>Task Instructions:</h2>
+            <p>
+                You have learned about the basic building blocks of HTML. Now it's time to put your knowledge into practice! Create an HTML page based on the following guidelines:
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Page Structure:</h2>
+            <ul>
+                <li><i class="fas fa-check icon"></i>Use the correct doctype declaration.</li>
+                <li><i class="fas fa-check icon"></i>Include the essential html, head, and body elements.</li>
+                <li><i class="fas fa-check icon"></i>Give your page a relevant title using the title tag (e.g., "My First Website").</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Content:</h2>
+            <ol>
+                <li><strong>Heading:</strong> Start with a main heading (h1) that describes your page's topic.</li>
+                <li><strong>Paragraphs:</strong> Write at least three paragraphs (p) with some information related to the heading.
+                    <ul>
+                        <li>Use bold (b or strong) and italic (i or em) formatting to emphasize certain words or phrases.</li>
+                    </ul>
+                </li>
+                <li><strong>Lists:</strong> Create one unordered list (ul) and one ordered list (ol).
+                    <ul>
+                        <li>Each list should have at least three items (li).</li>
+                    </ul>
+                </li>
+                <li><strong>Marquee:</strong> Add a scrolling text using the marquee tag.
+                    <ul>
+                        <li>Experiment with different directions (direction="left/right/up/down") and behaviors (behavior="scroll/slide/alternate").</li>
+                    </ul>
+                </li>
+                <li><strong>Table:</strong> Create a simple table (table) with two columns and three rows.
+                    <ul>
+                        <li>Use table headings (th) for the column names.</li>
+                        <li>Add some data to the table cells (td).</li>
+                    </ul>
+                </li>
+                <li><strong>Images:</strong> Add an image to your page using the img tag.
+                    <ul>
+                        <li>Use the alt attribute to provide a description of the image.</li>
+                    </ul>
+                </li>
+                <li><strong>Audio:</strong> Embed an audio file using the audio tag.
+                    <ul>
+                        <li>Provide controls for play/pause.</li>
+                    </ul>
+                </li>
+                <li><strong>Video:</strong> Embed a video using the video tag.
+                    <ul>
+                        <li>Provide controls for play/pause and volume.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>Sample Layout:</h2>
+            <h1>My Favorite Hobby</h1>
+            <p>
+                My favorite hobby is <strong>playing basketball</strong>. I love the <em>excitement</em> of the game, the <em>teamwork</em> involved, and the <em>challenge</em> of constantly improving my skills. 
+            </p>
+            <p>I play basketball every weekend with my friends. We usually go to the local park, where there are some outdoor courts. Sometimes we even join tournaments in our city. </p>
+            <p>Here are some reasons why I love basketball:</p>
+            <ul>
+                <li>It's a great way to stay active and healthy.</li>
+                <li>It's a lot of fun!</li>
+                <li>It teaches me important values like teamwork and sportsmanship.</li>
+            </ul>
+
+            <p>My top three favorite basketball players are:</p>
+            <ol>
+                <li>Michael Jordan</li>
+                <li>LeBron James</li>
+                <li>Stephen Curry</li>
+            </ol>
+
+            <marquee direction="left" behavior="scroll">This text is scrolling!</marquee>
+
+            <h2>My Basketball Stats</h2>
+            <table>
+                <tr>
+                    <th>Stat</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Points per game</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Assists per game</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Rebounds per game</td>
+                    <td>8</td>
+                </tr>
+            </table>
+
+            <div class="icon-container">
+                <i class="fas fa-image icon"></i>
+                <p>Here's an example of an image:</p>
+            </div>
+            <img src="image.jpg" alt="Example image" width="300">
+
+            <div class="icon-container">
+                <i class="fas fa-music icon"></i>
+                <p>Here's an example of an audio file:</p>
+            </div>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <div class="icon-container">
+                <i class="fas fa-video icon"></i>
+                <p>Here's an example of a video:</p>
+            </div>
+            <video width="320" height="240" controls>
+                <source src="vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="card">
+            <h2>Submission:</h2>
+            <p>Once you've created your HTML page, save it as a .html file and submit it through my email Alhibb01@gmail.com.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Ibrahim Rabiu. All rights reserved.</p

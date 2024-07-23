@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTML Tag Cheatsheet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 2rem;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #0056b3;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #0056b3;
+        }
+
+        code {
+            background-color: #eef;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: Consolas, 'Courier New', monospace;
+        }
+
+        details {
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            position: relative; /* For positioning the icon */
+            outline: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none; /* Hide the default browser arrow */
+        }
+
+        summary::before { /* Add Font Awesome icon */
+            content: '\f078'; /* Angle-down icon (collapsed) */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900; /* Use solid style */
+            margin-right: 0.5rem;
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        details[open] summary::before {
+            content: '\f077'; /* Angle-up icon (expanded) */
+            transform: rotate(180deg); 
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .welcome-message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease-in-out;
+            transition: transform 0.5s;
+        }
+
+        .welcome-message:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="welcome-message">
+    <h1>Welcome to Week 3 of BT Hub JSCE Bootcamp</h1>
+    <p>Introduction to coding by Ibrahim Rabiu (Head of Training)</p>
+</div>
+
+<h1>HTML Tags</h1>
+
+<h2>Basic Structure</h2>
+<p>These tags define the fundamental structure of an HTML document.</p>
+
+<details>
+    <summary><code>&lt;!DOCTYPE html&gt;</code></summary>
+    <p><strong>Definition:</strong> Declares the document as HTML5, instructing browsers to render it using the latest HTML version.</p>
+    <p><strong>Example:</strong> <code>&lt;!DOCTYPE html&gt;</code></p>
+</details>
+
+<details>
+    <summary><code>&lt;html&gt;</code></summary>
+    <p><strong>Definition:</strong> The root element of every HTML page. All other elements are nested within it.</p>
+    <p><strong>Example:</strong></p>
+    <code>
+        &lt;html&gt;<br>
+          &lt;head&gt; ... &lt;/head&gt;<br>
+          &lt;body&gt; ... &lt;/body&gt;<br>
+        &lt;/html&gt;
+    </code>
+</details>
+
+<details>
+    <summary><code>&lt;head&gt;</code></summary>
+    <p><strong>Definition:</strong> Contains metadata about the HTML document, such as the title, links to stylesheets, scripts, and other information not displayed directly on the page.</p>
+    <p><strong>Example:</strong></p>
+    <code>
+        &lt;head&gt;<br>
+          &lt;title&gt;My Website&lt;/title&gt;<br>
+          &lt;link rel="stylesheet" href="style.css"&gt;<br>
+        &lt;/head&gt;
+    </code>
+</details>
+
+<details>
+    <summary><code>&lt;title&gt;</code></summary>
+    <p><strong>Definition:</strong> Specifies the title of the HTML document, which is displayed in the browser's title bar or tab.</p>
+    <p><strong>Example:</strong> <code>&lt;title&gt;Ibrahim's Page&lt;/title&gt;</code></p>
+</details>
+
+<details>
+    <summary><code>&lt;body&gt;</code></summary>
+    <p><strong>Definition:</strong> Encloses the visible content of the HTML document, including text, images, links, and more.</p>
+    <p><strong>Example:</strong></p>
+    <code>
+        &lt;body&gt;<br>
+          &lt;h1&gt;Welcome to BT_HUB&lt;/h1&gt;<br>
+          &lt;p&gt;This is the main content of the page.&lt;/p&gt;<br>
+        &lt;/body&gt;
+    </code>
+</details>
+
+<!-- Headings -->
+<h2>Headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>)</h2>
+<p>Use headings to structure content with different levels of importance.</p>
+
+<details>
+    <summary><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></summary>
+    <p><strong>Definition:</strong> Headings define six levels of importance, with <code>&lt;h1&gt;</code> being the most important and <code>&lt;h6&gt;</code> the least.</p>
+    <p><strong>Examples:</strong></p>
+    <code>
+        &lt;h1&gt;Welcome to BT_HUB&lt;/h1&gt;<br>
+        &lt;h2&gt;About Maryam&lt;/h2&gt;<br>
+        &lt;h3&gt;My Skills&lt;/h3&gt;
+    </code>
+</details>
+
+<!-- Paragraphs -->
+<h2>Paragraphs (<code>&lt;p&gt;</code>)</h2>
+<details>
+    <summary><code>&lt;p&gt;</code></summary>
+    <p><strong>Definition:</strong> Represents a paragraph of text.</p>
+    <p><strong>Examples:</strong></p>
+    <code>
+        &lt;p&gt;Abba is visiting BT_HUB today.&lt;/p&gt;<br>
+        &lt;p&gt;He is interested in learning about their latest technology.&lt;/p&gt;
+    </code>
+</details>
+
+<!-- Text Formatting -->
+<h2>Text Formatting</h2>
+
+<details>
+    <summary><code>&lt;strong&gt;</code></summary>
+    <p><strong>Definition:</strong> Makes text bold, indicating strong importance.</p>
+    <p><strong>Example:</strong> <code>&lt;p&gt;This is a &lt;strong&gt;very important&lt;/strong&gt; message.&lt;/p&gt;</code></p>
+    <p><strong>Output:</strong> This is a <strong>very important</strong> message.</p>
+</details>
+
+<details>
+    <summary><code>&lt;em&gt;</code></summary>
+    <p><strong>Definition:</strong> Makes text italic, often used for emphasis or stylistic purposes.</p>
+    <p><strong>Example:</strong> <code>&lt;p&gt;Ibrahim whispered, &lt;em&gt;Let's meet at BT_HUB&lt;/em&gt;.&lt;/p&gt;</code></p>
+    <p><strong>Output:</strong> Ibrahim whispered, <em>Let's meet at BT_HUB</em>.</p>
+</details>
+
+<!-- Horizontal Rule -->
+<h2>Horizontal Rule (<code>&lt;hr&gt;</code>)</h2>
+<details>
+    <summary><code>&lt;hr&gt;</code></summary>
+    <p><strong>Definition:</strong> Inserts a horizontal rule, visually separating content sections.</p>
+    <p><strong>Example:</strong> <code>&lt;p&gt;First section&lt;/p&gt;&lt;hr&gt;&lt;p&gt;Second section&lt;/p&gt;</code></p>
+    <p><strong>Output:</strong></p>
+    <p>First section</p>
+    <hr>
+    <p>Second section</p>
+</details>
+
+<!-- Lists -->
+<h2>Lists</h2>
+
+<details>
+    <summary><code>&lt;ul&gt;</code> - Unordered List</summary>
+    <p><strong>Definition:</strong> Represents a list of items in no particular order, typically rendered as bullet points.</p>
+    <p><strong>Example:</strong></p>
+    <code>
+        &lt;ul&gt;<br>
+          &lt;li&gt;Item 1&lt;/li&gt;<br>
+          &lt;li&gt;Item 2&lt;/li&gt;<br>
+          &lt;li&gt;Item 3&lt;/li&gt;<br>
+        &lt;/ul&gt;
+    </code>
+    <p><strong>Output:</strong></p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</details>
+
+<details>
+    <summary><code>&lt;ol&gt;</code> - Ordered List</summary>
+    <p><strong>Definition:</strong> Represents a list of items in a specific order, typically rendered as numbered items.</p>
+    <p><strong>Example:</strong></p>
+    <code>
+        &lt;ol&gt;<br>
+          &lt;li&gt;First item&lt;/li&gt;<br>
+          &lt;li&gt;Second item&lt;/li&gt;<br>
+          &lt;li&gt;Third item&lt;/li&gt;<br>
+        &lt;/ol&gt;
+    </code>
+    <p><strong>Output:</strong></p>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+</details>
+
+<details>
+    <summary><code>&lt;li&gt;</code> - List Item</summary>
+    <p><strong>Definition:</strong> Represents a single item in a list.</p>
+    <p><strong>Example:</strong> <code>&lt;li&gt;Item&lt;/li&gt;</code></p>
+</details>
+
+<!-- Links -->
+<h2>Links</h2>
+
+<details>
+    <summary><code>&lt;a&gt;</code> - Anchor</summary>
+    <p><strong>Definition:</strong> Defines a hyperlink, used to link from one page to another.</p>
+    <p><strong>Example:</strong> <code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></p>
+    <p><strong>Output:</strong> <a href="https://example.com">Visit Example</a></p>
+</details>
+
+<!-- Images -->
+<h2>Images</h2>
+
+<details>
+    <summary><code>&lt;img&gt;</code> - Image</summary>
+    <p><strong>Definition:</strong> Embeds an image in the document. Requires the <code>src</code> attribute to specify the image URL and the <code>alt</code> attribute for alternative text.</p>
+    <p><strong>Example:</strong></p>
+    <code>&lt;img src="image.jpg" alt="Description of image"&gt;</code>
+    <p><strong>Output:</strong></p>
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+</details>
+
+<!-- Tables -->
+<h2>Tables</h2>
+
+<details>
+    <summary><code>&lt;table&gt;</code> - Table</summary>
+    <p><strong>Definition:</strong> Represents tabular data, consisting of rows and columns.</p>
+    <p><strong>Example:</strong></p>
+    <code>
+        &lt;table&gt;<br>
+          &lt;tr&gt;<br>
+            &lt;th&gt;Name&lt;/th&gt;<br>
+            &lt;th&gt;Age&lt;/th&gt;<br>
+          &lt;/tr&gt;<br>
+          &lt;tr&gt;<br>
+            &lt;td&gt;Ibrahim&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+          &lt;/tr&gt;<br>
+        &lt;/table&gt;
+    </code>
+    <p><strong>Output:</strong></p>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Ibrahim</td>
+            <td>25</td>
+        </tr>
+    </table>
+</details>
+
+<!-- Forms -->
+<h2>Forms</h2>
+
+<details>
+    <summary><code>&lt;form&gt;</code> - Form</summary>
+    <p><strong>Definition:</strong> Represents an interactive area containing form controls like input fields, checkboxes, radio buttons, and submit buttons.</p>
+    <p><strong>Example:</strong></p>
+    <code>
+        &lt;form action="/submit" method="post"&gt;<br>
+          &lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+          &lt;input type="text" id="name" name="name"&gt;<br>
+          &lt;br&gt;<br>
+          &lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+          &lt;input type="email" id="email" name="email"&gt;<br>
+          &lt;br&gt;<br>
+          &lt;input type="submit" value="Submit"&gt;<br>
+        &lt;/form&gt;
+    </code>
+</details>
+
+<!-- Media -->
+<h2>Media</h2>
+
+<details>
+    <summary><code>&lt;audio&gt;</code> - Audio</summary>
+    <p><strong>Definition:</strong> Embeds audio content in the document. Requires the <code>src</code> attribute to specify the audio file URL.</p>
+    <p><strong>Example:</strong> <code>&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;</code></p>
+    <p><strong>Output:</strong></p>
+    <audio src="audio.mp3" controls>
+        Your browser does not support the audio element.
+    </audio>
+</details>
+
+<details>
+    <summary><code>&lt;video&gt;</code> - Video</summary>
+    <p><strong>Definition:</strong> Embeds video content in the document. Requires the <code>src</code> attribute to specify the video file URL.</p>
+    <p><strong>Example:</strong> <code>&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</code></p>
+    <p><strong>Output:</strong></p>
+    <video src="video.mp4" controls>
+        Your browser does not support the video tag.
+    </video>
+</details>
+
+<details>
+    <summary><code>&lt;iframe&gt;</code> - Inline Frame</summary>
+    <p><strong>Definition:</strong> Embeds another HTML document within the current document.</p>
+    <p><strong>Example:</strong> <code>&lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;</code></p>
+    <p><strong>Output:</strong></p>
+    <iframe src="https://example.com" width="300" height="200">
+        Your browser does not support iframes.
+    </iframe>
+</details>
+
+</body>
+</html>
